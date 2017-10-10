@@ -31,4 +31,4 @@ class Car(models.Model):
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return f'{self.manufacturer.name} - {self.name}'
