@@ -10,3 +10,10 @@ class Person(models.Model):
 
     name = models.CharField(max_length=60)
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
+
+
+class Fruit(models.Model):
+    name = models.CharField(
+        max_length=100,
+        primary_key=True,
+    )
