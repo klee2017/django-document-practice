@@ -17,3 +17,12 @@ class Fruit(models.Model):
         max_length=100,
         primary_key=True,
     )
+
+
+class Manufacturer(models.Model):
+    name = models.CharField(max_length=50)
+
+
+class Car(models.Model):
+    name = models.CharField(max_length=50)
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
