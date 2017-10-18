@@ -1,14 +1,14 @@
 from django.db import models
 
 __all__ = (
-    'FacebookUser',
+    'InstagramUser',
 )
 
-
-class FacebookUser(models.Model):
+class InstagramUser(models.Model):
     name = models.CharField(max_length=30)
-    friends = models.ManyToManyField(
+    following = models.ManyToManyField(
         'self',
+        symmetrical=False,
         blank=True,
     )
 
